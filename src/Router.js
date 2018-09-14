@@ -1,12 +1,20 @@
 import {StackNavigator} from 'react-navigation';
 
-import abc from './components/Chat';
+import Chat from './components/Chat';
 
+import Login from './components/Login';
 
 const Router = StackNavigator({
 
+    Login:{
+        screen:Login,
+        navigationOptions:{
+            header:false
+        }
+    },
+
     Chat:{
-        screen:abc,
+        screen:Chat,
         navigationOptions:{
             header:false
         }

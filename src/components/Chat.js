@@ -40,7 +40,7 @@ import { View, Text, StyleSheet, TextInput, FlatList,
     TouchableHighlight, KeyboardAvoidingView } from 'react-native';
 
     //NativeModules
-    import { NativeModules } from 'react-native';
+import { NativeModules } from 'react-native';
 
 import { Header } from 'react-native-elements';
 import { connect } from 'react-redux';
@@ -105,7 +105,7 @@ export default class Chat extends Component {
         return (
             <View style={styles.container}>
                 <Header
-                    centerComponent={{ text: 'MtaChat', style: { color: '#fff', fontSize: 20 } }}
+                    centerComponent={{ text: 'ChatMta', style: { color: '#fff', fontSize: 20 } }}
                 />
 
                 { this.showListOrSpinner () }
