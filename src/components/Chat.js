@@ -38,6 +38,10 @@ import React, { Component } from 'react';
 import { View, Text, StyleSheet, TextInput, FlatList, 
     Platform, Keyboard,ActivityIndicator,
     TouchableHighlight, KeyboardAvoidingView } from 'react-native';
+
+    //NativeModules
+    import { NativeModules } from 'react-native';
+
 import { Header } from 'react-native-elements';
 import { connect } from 'react-redux';
 import { sendMessage, fetchMessges } from '../actions';
@@ -52,9 +56,10 @@ export default class Chat extends Component {
             disabled: true
         }
     }
-    
+
     componentDidMount() {
        // this.props.fetchMessges();
+        NativeModules.ToastExample.show('Hello world');
     }
 
     onTyping(text) {
@@ -100,7 +105,7 @@ export default class Chat extends Component {
         return (
             <View style={styles.container}>
                 <Header
-                    centerComponent={{ text: 'Chat', style: { color: '#fff', fontSize: 20 } }}
+                    centerComponent={{ text: 'MtaChat', style: { color: '#fff', fontSize: 20 } }}
                 />
 
                 { this.showListOrSpinner () }
@@ -169,3 +174,5 @@ const styles = StyleSheet.create({
         backgroundColor: '#89a9f4'
     }
 });
+
+

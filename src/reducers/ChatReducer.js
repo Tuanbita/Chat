@@ -2,6 +2,7 @@ import { RECIVED_MESS, FETCHING } from '../actions/types';
 
 const INITIAL_STATE = { fetching: false, messages: [] };
 
+
 const chatReducers = (state = INITIAL_STATE, action) => {
     switch (action.type) {
         case FETCHING:
